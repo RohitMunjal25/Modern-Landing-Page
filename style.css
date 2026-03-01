@@ -1,0 +1,141 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:#111;
+  color:white;
+}
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:30px;
+  align-items:center;
+}
+.menu{
+    display:none;
+}
+.btn{
+  padding:10px 20px;
+  background:#ff4d4d;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+.btn1{
+    padding: 10px 20px;
+    background: black;
+    color: white;
+}
+.main{
+  height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  background: linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+  background-size:cover;
+  background-position:center;
+}
+
+.main-text{
+  max-width:700px;
+}
+
+.main h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.main p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+.features{
+  display:flex;
+  justify-content:center;
+  gap: 60px;
+  padding:100px 40px;
+}
+
+.cards{
+  background: white;
+  padding: 40px;
+  width: 300px;
+  border-radius:15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.cards:hover{
+    transform: translateY(-10px);
+}
+.pricing{
+  display:flex;
+  justify-content:center;
+  gap: 40px;
+  padding:100px 40px;
+  background: #f7f7f7;;
+}
+
+.pricecard{
+  background:white;
+  padding: 50px;
+  width: 280px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border:3px solid red;
+  transition: 0.3s;
+}
+.pricecard:hover{
+    transform: scale(1.05);
+}
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111;
+  color:white;
+}
+@media (max-width:768px){
+
+  .menu{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#111;
+    flex-direction:column;
+    width:200px;
+    height:0;
+    overflow:hidden;
+    transition:0.3s;
+  }
+
+  .nav-links.show{
+    height:200px;
+    padding:20px;
+  }
+
+  .features,
+  .pricing{
+    flex-direction:column;
+    gap:30px;
+    align-items:center;
+  }
+
+}
